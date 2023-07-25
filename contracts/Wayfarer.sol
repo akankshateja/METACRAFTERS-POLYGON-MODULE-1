@@ -18,7 +18,7 @@ contract Wayfarer is ERC721A{
     string public prompt =
         "a cute girl in blue dress black hair wayfarer";
 
-    vconstructor() ERC721A("Wayfarer", "WFR") {
+    constructor() ERC721A("Wayfarer", "WFR") {
         owner = msg.sender;
     }
 
