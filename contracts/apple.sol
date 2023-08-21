@@ -30,7 +30,7 @@ contract apple is ERC721A{
 
     // Function to mint NFT which only owner can perform
     function mint(uint256 quantity) external payable onlyOwner{
-        require(totalSupply() + quantity <= maxQuantity ,"You can not mint more than 5");
+        require(totalSupply() + quantity <= maxQuantity ,"You cann't mint more than 5");
         _mint(msg.sender, quantity);
     }
 
