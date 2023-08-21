@@ -4,7 +4,7 @@ pragma solidity ^0.8.9;
 
 import "erc721a/contracts/ERC721A.sol";
 
-contract Wayfarer is ERC721A{
+contract apple is ERC721A{
 
     address public owner;
 
@@ -12,19 +12,19 @@ contract Wayfarer is ERC721A{
     uint256 public maxQuantity = 5;
 
     // Base url for the nfts
-    string baseUrl = "https://gateway.pinata.cloud/ipfs/QmSVSJyaX8YbkKADRADFbGZyfoYX6VXk7Fk1yi1vTKNc1F/";
+    string baseUrl = "https://gateway.pinata.cloud/ipfs/QmSZtSgSmP2t7wnKXSJYcZq96JeSFWkGtj86SgwgDkipyE/";
 
     // URL for the prompt description
     string public prompt =
-        "a cute girl in blue dress black hair wayfarer";
+        "an apple";
 
-    constructor() ERC721A("Wayfarer", "WFR") {
+    constructor() ERC721A("apple", "APP") {
         owner = msg.sender;
     }
 
-    // Modifier that only allows the owner to execute a function
+    // Modifier that only allows the owner to execute a action
     modifier onlyOwner() {
-        require(msg.sender == owner, "Only owner can perform this function");
+        require(msg.sender == owner, "Only owner can perform this action");
         _;
     }
 
